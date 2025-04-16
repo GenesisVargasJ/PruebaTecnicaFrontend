@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
+import actorsReducer from "./features/actor/infraestructure/actorSlice";
 
 export const makeStore = () => {
   return configureStore({
-    reducer: {},
+    reducer: {
+      actors: actorsReducer,
+    },
   })
 }
 
